@@ -1,11 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Allure Report">
+<suite name="Pet Store Reports Suite">
+
     <listeners>
+        <listener class-name="com.automation.listeners.ExtentListener"/>
         <listener class-name="com.automation.test.AllureListener"></listener>
     </listeners>
     <test name="test">
         <classes>
-            <class name="com.automation.test.RegisterTest"/>
+            <class name="com.automation.test.PetStoreTest"/>
         </classes>
     </test>
 </suite>

@@ -9,12 +9,11 @@ import java.io.ByteArrayInputStream;
 
 public class AllureReportManager {
 
-    public static void attachScreenshot(){
+    public static void attachScreenshot(String testName){
         TakesScreenshot ts = (TakesScreenshot) DriverManager.getDriver();
         byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
-        Allure.addAttachment("Screenshot",new ByteArrayInputStream(screenshot));
+        Allure.addAttachment(testName + "AllureReport_Screenshot", new ByteArrayInputStream(screenshot));
     }
-
 
     public static void attachLog(String message){
         Allure.addAttachment("log",message);

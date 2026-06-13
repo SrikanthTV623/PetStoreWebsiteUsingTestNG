@@ -5,7 +5,7 @@ import com.automation.utils.ConfigReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class RegisterTest extends BaseTest{
+public class PetStoreTest extends BaseTest{
 
     @Test(priority = 1)
     public void userRegistersToWebsite(){
